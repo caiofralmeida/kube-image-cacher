@@ -13,9 +13,6 @@ const (
 var validProviders = []string{"ecr"}
 
 func init() {
-	viper.SetDefault(registryProvider, "ecr")
-	viper.SetDefault(registryURL, "215023620964.dkr.ecr.us-east-1.amazonaws.com")
-	viper.SetDefault("aws_region", "us-east-1")
 	viper.AutomaticEnv()
 }
 

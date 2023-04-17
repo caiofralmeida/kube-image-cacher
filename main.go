@@ -50,27 +50,6 @@ func main() {
 	opts.BindFlags(flag.CommandLine)
 	flag.Parse()
 
-	/*repos, err := awsEcr.DescribeRepositories(&ecr.DescribeRepositoriesInput{
-		//RegistryId: aws.String(cfg.AWSRegistryID),
-	})
-
-
-	fmt.Println(repos, err)
-	os.Exit(0)*/
-
-	/*creation, err := awsEcr.CreateRepository(&ecr.CreateRepositoryInput{
-		RepositoryName: aws.String("foo"),
-		Tags: []*ecr.Tag{
-			{
-				Key:   aws.String("area"),
-				Value: aws.String("platform"),
-			},
-		},
-	})
-
-	fmt.Println(creation, err)
-	os.Exit(0)*/
-
 	ctrl.SetLogger(zap.New(
 		zap.UseFlagOptions(&opts),
 		zap.UseDevMode(true),
